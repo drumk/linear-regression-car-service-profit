@@ -31,35 +31,42 @@ J(θ) = 1/2m * Σ(hθ(x(i)) - y(i))^2
 θ1 = θ1 - α * 1/m * Σ(hθ(x(i)) - y(i)) * x(i)
 
 ## Структура проекта
-linear-regression-car-service-profit/
-├── data/
-│ └── ex1data1.txt # Исходные данные
-├── src/
-│ ├── ex1.py # Основной скрипт обучения
-│ ├── computeCost.py # Вычисление функции стоимости
-│ ├── gradientDescent.py # Реализация градиентного спуска
-│ ├── plotData.py # Визуализация данных
-│ ├── predict.py # Функция предсказания
-│ ├── work.py # Программа для предсказаний
-│ └── test_cost.py # Тест корректности вычислений
-├── requirements.txt
-├── README.md
-└── .gitignore
+
+- **data/** - исходные данные
+  - ex1data1.txt
+- **src/** - исходный код
+  - ex1.py - основной скрипт обучения
+  - computeCost.py - вычисление функции стоимости
+  - gradientDescent.py - реализация градиентного спуска
+  - plotData.py - визуализация данных
+  - predict.py - функция предсказания
+  - work.py - программа для предсказаний
+  - test_cost.py - тест корректности вычислений
+- requirements.txt
+- README.md
+- .gitignore
 
 ## Запуск
 
 1. Установи зависимости:
 ```bash
 pip install -r requirements.txt
+```
 
 2. Запусти обучение модели:
+```bash
 python src/ex1.py
+```
 
 3. Для интерактивного прогнозирования:
+```bash
 python src/work.py
+```
 
 4. Запусти тесты:
+```bash
 python src/test_cost.py
+```
 
 ## Результаты
 Проект демонстрирует:
