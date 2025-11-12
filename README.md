@@ -55,17 +55,17 @@ pip install -r requirements.txt
 
 2. Запусти обучение модели:
 ```bash
-python src/ex1.py
+py src/ex1.py
 ```
 
 3. Для интерактивного прогнозирования:
 ```bash
-python src/work.py
+py src/work.py
 ```
 
 4. Запусти тесты:
 ```bash
-python src/test_cost.py
+py src/test_cost.py
 ```
 
 ## Результаты

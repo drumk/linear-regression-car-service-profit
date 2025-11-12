@@ -4,7 +4,7 @@ import os
 
 def test_initial_cost():
     # ─ загрузка датасета
-    data = np.loadtxt(os.path.join(os.path.dirname(__file__), "ex1data1.txt"), delimiter=",")
+    data = np.loadtxt(os.path.join(os.path.dirname(__file__), "..", "data", "ex1data1.txt"), delimiter=",")
     X_raw, y = data[:, 0], data[:, 1]
     m = len(y)
 
@@ -17,7 +17,7 @@ def test_initial_cost():
 
     assert abs(cost - expected) < 1e-3, f"Ожидалось {expected}, получено {cost}"
 
-    print(f"Тест пройден: cost = {cost:.6f} (≈ {expected})")
+    print(f"Тест пройден: cost = {cost:.6f} (~ {expected})")  # ИСПРАВЛЕНО
 
 if __name__ == "__main__":
     test_initial_cost()

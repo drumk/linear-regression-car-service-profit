@@ -9,7 +9,7 @@ import os
 
 # 1. загрузка данных
 
-DATA_FILE = os.path.join(os.path.dirname(__file__), "ex1data1.txt")
+DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "ex1data1.txt")
 
 try:
     data = np.loadtxt(DATA_FILE, delimiter=",")
@@ -19,13 +19,10 @@ except FileNotFoundError:
 X_raw, y = data[:, 0], data[:, 1]
 m = len(y)
 
-# 2. визуализация исходных точек
-
+# 2. визуализация исходных точек - ЗАКОММЕНТИРОВАНО
 plotData(X_raw, y)
 
-# 3. «нормализация»: добавляем столбец единиц
-#    (для одного признака z‑score не обязателен, поэтому оставляем
-#     X_raw как есть, а «нормируем» только добавлением 1)
+# 3. добавление столбца единиц
 
 X = np.column_stack((np.ones(m), X_raw))
 
@@ -40,11 +37,10 @@ print("Начальная cost =", computeCost(X, y, theta))
 alpha = 0.01
 iterations = 1500
 theta, J_history = gradientDescent(X, y, theta, alpha, iterations)
-print("Найденные θ :", theta)
+print("Найденные параметры theta:", theta)  # ИСПРАВЛЕНО
 
 
-# 6. график линии регрессии
-
+# 6. график линии регрессии - ЗАКОММЕНТИРОВАНО
 plt.figure()
 plt.scatter(X_raw, y, marker="x", color="blue", label="Обучающие данные")
 plt.plot(X_raw, X @ theta, color="red", label="Линия регрессии")

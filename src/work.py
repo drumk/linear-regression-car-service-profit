@@ -15,7 +15,7 @@ def predict_profit(num_cars):
 if __name__ == "__main__":
     print("Прогноз прибыли СТО (введите 'q' для выхода)")
     while True:
-        val = input("Количество автомобилей (×10 000): ")
+        val = input("Количество автомобилей (в 10 000): ")  # ИСПРАВЛЕНО
         if val.lower() == "q":
             break
         try:
